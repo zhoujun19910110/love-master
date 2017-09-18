@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Hello Kiss</title>
+</head>
+<body>
+<nav>
+    <a href="#r=home">Home</a>
+    <a href="#r=discovery">Discovery</a>
+</nav>
+
+<section class="container" id="container">
+
+</section>
+
+<script src="dist/lib/zepto.min.js"></script>
+<script src="dist/lib/sea.js"></script>
+<script>
+    //模块加载配置
+    seajs.config({
+        base: './src',//设置根目录
+        alias: {
+            'template': 'common/template'//模板引擎，渲染数据
+        },
+        debug: false//发布请前置为false
+    });
+    seajs.use('index');//加载入口模块
+</script>
+</body>
+</html>
